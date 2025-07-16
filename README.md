@@ -12,6 +12,7 @@
 </p>
 
 # moto-manual-downloader
+
 Download PDF manuals for any motorcycle
 
 [![CodeQL](https://github.com/luboszima/moto-manual-downloader/workflows/codeql/badge.svg)](https://github.com/luboszima/moto-manual-downloader/actions/workflows/codeql.yml)
