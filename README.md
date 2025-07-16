@@ -28,15 +28,33 @@ Download PDF manuals for any motorcycle
 - [What's in the box ?](#whats-in-the-box-)
 - [Testing](#testing)
 - [Docker](#docker)
+- [Conventional Commits](#conventional-commits)
 
 ---
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/) **>=3.13.0 <3.14.0** (_tested with 3.13.5_)
-- [pre-commit](https://pre-commit.com/#install) **>=3.2.0 <5.0.0** (_tested with 4.2.0_)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) **>=0.7.13** (_tested with 0.7.13_)
+This project uses [asdf](https://asdf-vm.com/) for tool version management. The required versions are specified in the `.tool-versions` file:
+
+- [Python](https://www.python.org/downloads/) **3.13.5**
+- [pre-commit](https://pre-commit.com/#install) **4.2.0**
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) **0.7.21**
+- [task](https://taskfile.dev/) **3.44.0**
+- [shfmt](https://github.com/mvdan/sh) **3.11.0**
+- [shellcheck](https://www.shellcheck.net/) **0.10.0**
 - [docker](https://docs.docker.com/get-docker/) (_optional_)
+
+You can install all required tools with:
+
+```bash
+asdf install
+# or
+task dependencies
+task install
+# or
+bash scripts/dependencies_linux.sh # or dependencies_darwin.sh
+bash scripts/install.sh
+```
 
 ---
 
@@ -65,6 +83,8 @@ Download PDF manuals for any motorcycle
    ```bash
    pre-commit install
    ```
+
+   > **Note:** A pre-commit hook is set up to enforce [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
 5. Configure Python environment
 
@@ -220,5 +240,13 @@ Hello World
 ```bash
 docker run -it --rm my-python-application:latest bash
 ```
+
+---
+
+## Conventional Commits
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) for commit messages. A pre-commit hook is configured to enforce this standard. Please make sure your commit messages follow the Conventional Commits specification (e.g., `feat: add new feature`, `fix: correct a bug`).
+
+If you try to commit with a message that does not follow the convention, the pre-commit hook will block the commit.
 
 ---
