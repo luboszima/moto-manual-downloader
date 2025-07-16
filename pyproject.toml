@@ -100,3 +100,6 @@ extend-select = [
 [tool.mypy]
 files = ["src", "tests"]
 strict = "true"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/manual_downloader"]
