@@ -5,7 +5,7 @@ description = "Download PDF manuals for any motorcycle"
 requires-python = ">=3.13"
 license = { file = "LICENSE" }
 authors = [
-  { name = "Samuel MARLHENS", email = "samuel.marlhens@proton.me" },
+  { name = "Lubos Zima", email = "lubos.zima@gmail.com" },
 ]
 readme = { file = "README.md", content-type = "text/markdown" }
 
