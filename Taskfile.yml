@@ -59,3 +59,10 @@ tasks:
     cmds:
       - echo "Running pre-commit hooks..."
       - pre-commit run --all-files
+
+  venv:
+    desc: Create a virtual environment for the project
+    dir: "{{.TASKFILE_DIR}}"
+    cmds:
+      - echo "Creating virtual environment..."
+      - uv venv
