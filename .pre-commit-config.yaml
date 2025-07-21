@@ -1,5 +1,5 @@
 ci:
-  skip: [pytest]
+  skip: [pytest, shellcheck]
 
 default_language_version:
   python: python3.13
