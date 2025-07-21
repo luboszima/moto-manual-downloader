@@ -1,13 +1,16 @@
 [project]
-name = "python-boilerplate"
+name = "moto-manual-downloader"
 version = "0.1.0"
-description = "Python boilerplate"
+description = "Download PDF manuals for any motorcycle"
 requires-python = ">=3.13"
 license = { file = "LICENSE" }
 authors = [
-  { name = "Samuel MARLHENS", email = "samuel.marlhens@proton.me" },
+  { name = "Lubos Zima", email = "lubos.zima@gmail.com" },
 ]
 readme = { file = "README.md", content-type = "text/markdown" }
+dependencies = [
+    "requests>=2.32.4",
+]
 
 [project.urls]
 homepage = "https://github.com/smarlhens/python-boilerplate#readme"
@@ -100,3 +103,6 @@ extend-select = [
 [tool.mypy]
 files = ["src", "tests"]
 strict = "true"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/manual_downloader"]
